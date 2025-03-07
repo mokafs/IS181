@@ -3,9 +3,8 @@ const certs = document.getElementById('certSlides');
 const totalCerts = document.querySelectorAll('.certificate').length;
 
 function showCert(index) {
-    // Clamp index to valid range
     currentCert = Math.max(0, Math.min(index, totalCerts - 1));
-    const offset = (currentCert * 100) / totalCerts; // Calculate percentage per certificate
+    const offset = (currentCert / totalCerts) * 100; // Calculate percentage based on total
     certs.style.transform = `translateX(-${offset}%)`;
 }
 

@@ -104,15 +104,16 @@ body {
 .certificates {
     display: flex;
     transition: transform 0.5s ease;
-    width: 300%;
-    /* 3 certificates × 100% each */
+    width: 1200%;
+    /* 12 certificates × 100% each */
 }
 
 .certificate {
-    width: 33.333%;
-    /* 1/3 of container width */
+    width: 8.3333%;
+    /* 1/12 of container width */
     box-sizing: border-box;
     padding: 30px;
+    flex-shrink: 0;
 }
 
 .arrow {
@@ -131,10 +132,12 @@ body {
 
 .left-arrow {
     left: 20px;
+    /* Position inside container */
 }
 
 .right-arrow {
     right: 20px;
+    /* Position inside container */
 }
 
 .pdf-preview {
