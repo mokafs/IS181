@@ -23,15 +23,19 @@ const navLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
     let current = '';
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (window.pageYOffset >= sectionTop) {
+        const sectionTop = section.offsetTop - 140; // Match scroll-margin-top value
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
+
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.href.includes(current)) {
+        if (link.getAttribute('href').includes(current)) {
             link.classList.add('active');
         }
     });
