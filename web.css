@@ -44,7 +44,7 @@ body {
 
 .section {
     scroll-margin-top: 140px;
-    padding: 140px 40px 40px;
+    padding: 140px 40px 60px;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
