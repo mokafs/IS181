@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #000, #000033);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #bbdfff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00f;
+    background: linear-gradient(90deg, #003366, #000033);
+}
+
+.section {
+    height: 100vh;
+    padding: 140px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#welcome {
+    background: linear-gradient(135deg, #000, #000033 70%);
+}
+
+#about {
+    background: linear-gradient(135deg, #000033, #0a0a0a);
+}
+
+#certificates {
+    background: linear-gradient(135deg, #0a0a0a, #000033);
+}
+
+#research {
+    background: linear-gradient(135deg, #000033, #0a0a0a);
+}
+
+.certificate-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    border: 2px solid #003366;
+    border-radius: 15px;
+}
+
+.certificates {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.certificate {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, #003366, #000033);
+    color: #bbdfff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    background: linear-gradient(90deg, #005599, #003366);
+}
+
+.left-arrow {
+    left: -50px;
+}
+
+.right-arrow {
+    right: -50px;
+}
+
+.research-buttons {
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.research-btn {
+    background: linear-gradient(90deg, #003366, #000033);
+    color: #bbdfff;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+.research-btn:hover {
+    background: linear-gradient(90deg, #005599, #003366);
+    transform: translateY(-3px);
+}
+
+.highlight {
+    background: linear-gradient(45deg, #00f, #009);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 30px 0;
+    object-fit: cover;
+    border: 3px solid #003366;
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.5);
+}
+
+.pdf-preview {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #003366;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+}
+
+.pdf-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+h1 {
+    font-size: 4.5em;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #bbdfff;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: #c4c4c4;
+    font-size: 1.2em;
+    max-width: 800px;
+}
+
+/* About section styling */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.about-content img {
+    border: 3px solid #003366;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.about-text {
+    max-width: 700px;
+    color: #c4c4c4;
+}
+
+/* Certificate carousel improvements */
+.certificate-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    border: 2px solid #003366;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.certificates {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, #003366, #000033);
+    color: #bbdfff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.pdf-preview {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+}

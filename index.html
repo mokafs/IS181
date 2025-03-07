@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#welcome" class="active">Welcome</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#research">Research</a></li>
+        </ul>
+    </nav>
+
+    <div id="welcome" class="section">
+        <h1 class="highlight">Welcome to My Portfolio</h1>
+        <img src="images/main.jpg" alt="Profile Image" class="profile-image">
+        <p>Martin Joaquin S. Pabellon</p>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/Me.png" alt="Profile">
+            <div class="about-text">
+                <p><br>Hello! I am Martin Joaquin S. Pabellon. I am currently a 3rd year Computer Science student
+                    enrolled in Mapua Malayan Colleges Mindanao. I am an aspiring developer focusing onto machine
+                    learning and
+                    web development, other hobbies I have are hiking, gaming, and table-top/board games.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificates" class="section">
+        <h2>Certifications</h2>
+        <div class="certificate-container">
+            <button class="arrow left-arrow" onclick="prevCert()">&#10094;</button>
+            <div class="certificates" id="certSlides">
+                <div class="certificate">
+                    <div class="pdf-preview">
+                        <iframe src="CertificateOfCompletion_Agile Software Development Clean Coding Practices.pdf"
+                            title="Certificate 1"></iframe>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <div class="pdf-preview">
+                        <iframe src="CertificateOfCompletion_Agile Software Development Refactoring.pdf"
+                            title="Certificate 2"></iframe>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <div class="pdf-preview">
+                        <iframe src="CertificateOfCompletion_Understanding the Impact of a Merger for IT Teams.pdf"
+                            title="Certificate 3"></iframe>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right-arrow" onclick="nextCert()">&#10095;</button>
+        </div>
+    </div>
+
+    <div id="research" class="section">
+        <h2>Research</h2>
+        <div class="research-buttons">
+            <a href="research-paper.pdf" target="_blank"><button class="research-btn">View Research Paper</button></a>
+            <a href="research-poster.pdf" target="_blank"><button class="research-btn">View Research Poster</button></a>
+        </div>
+    </div>
+
+    <script src="web.js"></script>
+</body>
+
+</html>
