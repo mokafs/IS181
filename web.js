@@ -3,19 +3,18 @@ const certs = document.getElementById('certSlides');
 const totalCerts = document.querySelectorAll('.certificate').length;
 
 function showCert(index) {
-    if (index >= totalCerts) currentCert = 0;
-    if (index < 0) currentCert = totalCerts - 1;
-    certs.style.transform = `translateX(-${currentCert * 100}%)`;
+    // Clamp index to valid range
+    currentCert = Math.max(0, Math.min(index, totalCerts - 1));
+    const offset = (currentCert * 100) / totalCerts; // Calculate percentage per certificate
+    certs.style.transform = `translateX(-${offset}%)`;
 }
 
 function nextCert() {
-    currentCert++;
-    showCert(currentCert);
+    showCert(currentCert + 1);
 }
 
 function prevCert() {
-    currentCert--;
-    showCert(currentCert);
+    showCert(currentCert - 1);
 }
 
 // Navbar active link
@@ -26,7 +25,7 @@ window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
+        if (window.pageYOffset >= sectionTop) {
             current = section.getAttribute('id');
         }
     });
